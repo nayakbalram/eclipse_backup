@@ -1,0 +1,17 @@
+package Constructor;
+
+public class test0 {
+	test0()
+	{
+		System.out.println("Zero Argument Constructor");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//new test0();
+		test0 t=new test0();
+		
+
+	}
+
+}

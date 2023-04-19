@@ -1,0 +1,22 @@
+package ControlStatement;
+
+public class count {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i=10;
+		int count=0;
+		while(i<200)
+		{
+			if (i%2==0)
+			{
+				count++;
+			}
+			i++;
+		}
+		System.out.println(count);
+
+
+	}
+
+}

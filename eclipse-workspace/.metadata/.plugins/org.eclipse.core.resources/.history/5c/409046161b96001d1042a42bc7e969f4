@@ -1,0 +1,15 @@
+package Constructor;
+
+public class test2 {
+	test2()
+	{
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		test2 t=new test2();// Default Constructor
+
+	}
+
+}

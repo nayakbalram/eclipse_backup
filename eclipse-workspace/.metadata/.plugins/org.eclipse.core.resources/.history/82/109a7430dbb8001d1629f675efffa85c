@@ -1,0 +1,52 @@
+package DatePicker;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class p1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.get("https://jqueryui.com/datepicker/");
+		driver.switchTo().frame(0);
+		WebElement element =driver.findElement(By.xpath("//input[@class='hasDatepicker']"));
+		element.click();
+		String Expectedmonth="February";
+		String ExpectedYear="2023";
+		String Expectedday="5";
+		
+		while(true)
+		{
+			String actualmonth=driver.findElement(By.xpath("//span[@class='ui-datepicker-month']")).getText();
+			String actualyear=driver.findElement(By.xpath("//span[@class='ui-datepicker-year']")).getText();
+            if(actualmonth.equals(Expectedmonth)&& actualyear.equals(ExpectedYear))
+            {
+            	List<WebElement> daylist=driver.findElements(By.xpath("//table//tbody/tr/td"));
+            	for(WebElement e: daylist)
+            	{
+            		String Calendarday=e.getText();
+            		if(Calendarday.equals(Expectedday))
+            		{
+            			e.click();
+            			break;
+            		}
+            	}
+            	break;
+            }
+            else
+            {
+            	driver.findElement(By.xpath("//span[@class='ui-icon ui-icon-circle-triangle-e']")).click();
+            }
+			
+		}
+
+	}
+
+}

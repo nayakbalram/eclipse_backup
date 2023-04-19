@@ -1,0 +1,21 @@
+package Constructor;
+
+public class test0 {
+	test0()
+	{
+		System.out.println("Zero Argument Constructor");
+	}
+	test0(int a)
+	{
+		System.out.println("jhgh");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//new test0();// this way You can call constructor
+		test0 t=new test0();// only object creation 
+		
+
+	}// In constructor class name & method name should same
+
+}

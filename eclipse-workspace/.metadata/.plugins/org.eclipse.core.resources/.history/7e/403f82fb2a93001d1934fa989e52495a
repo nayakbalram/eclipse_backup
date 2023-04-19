@@ -1,0 +1,10 @@
+package Inheritence;
+
+public class Jalendar {
+	String a = "Father of Karan & Kasis";
+	void m1()
+	{
+		System.out.println("kgj");
+	}
+
+}
